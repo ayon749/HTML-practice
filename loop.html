@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loop</title>
+</head>
+<body>
+<p>"use strict" in a function will only cause errors in that function.</p>
+
+<p>Activate debugging in your browser (F12) to see the error report.</p>
+<p id ="demo">hgghk</p>
+
+<script>
+class Car{
+	constructor(brand){
+		this.carname=brand;
+	}
+	get carName(){
+		return this.carname;
+	}
+	set carName(cName){
+		this.carname=cName;
+
+	}
+	
+}
+
+mycar=new Car("ford");
+mycar.carName="Volvo";
+document.getElementById("demo").innerHTML=mycar.carName;
+
+
+</script>
+
+</body>
+</html>

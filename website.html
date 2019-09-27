@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+	<script type="text/javascript">
+	function myfunction(){
+		document.getElementById("p1").innerHTML="Bangladesh";
+	}
+	</script>
+</head>
+<body>
+
+<p id="p1"></p>
+<button type="button" onclick="myfunction()">try it</button>
+<p>Text will be change<p id="demo">Here</p></p>
+<button type="button" onclick="myfunction1(4,5)">Click Here</button>
+<script type="text/javascript">
+	function myfunction1(p1,p2){
+		return document.getElementById("demo").innerHTML=p1*p2;
+	}
+	//document.getElementById("demo").innerHTML=myfunction1(10,12);
+</script>
+<h1>Strings</h1>
+
+<p id="demo1"></p>
+<script type="text/javascript">
+	var str="Please  where 'locate' occurs!";
+	document.getElementById("demo1").innerHTML=str.indexOf("locate");
+</script>
+
+<h2>Number</h2>
+<p id=demo3></p>
+<script type="text/javascript">
+	document.getElementById("demo3").innerHTML=Number.MAX_VALUE;
+</script>
+<p id="d"></p>
+<script type="text/javascript">
+	var num=[1,2,3,4,5];
+	var len=num.length;
+	var text,i;
+	text="<ul>";
+	for(i=0;i<len;i++){
+		text+="<li>" +num[i]+"</li>";
+	}
+	text+="</ul>";
+	document.getElementById("d").innerHTML=text;
+
+
+</script>
+<p id="d1"></p>
+<script type="text/javascript">
+	var sis=["Sanjida","Ani"];
+	var bro=["Mustafiz","Ankan"];
+	var total=sis.concat(bro);
+	document.getElementById("d1").innerHTML=total;
+</script>
+<p id="loop"></p>
+
+<script type="text/javascript">
+	var txt="";
+	var num=[1,2,3,4,5];
+	num.forEach(myfunction5);
+	document.getElementById("loop").innerHTML=txt;
+
+	function myfunction5(value,index,array){
+		txt=txt+ value+"<br>";
+
+	}
+
+</script>
+
+<input type="input" name="age" value="18" id="age">
+<button onclick="myFun()">Try it</button>
+<p id="abc">jhbvjhkjb</p>
+
+<script type="text/javascript">
+	function myFun(){
+		var age,voteable;
+		age=Number(document.getElementById("age").value);
+		if(isNaN(age)){
+			voteable="Input is not Number";
+
+		}
+		else{
+			voteable=(age<18)? "Too young": "Old enough";
+
+			}
+			document.getElementById("abc").innerHTML=voteable;
+		}
+	
+</script>
+<p id="car"></p>
+<script type="text/javascript">
+	document.getElementById("car").innerHTML="abcd";
+	var cars=["BMW","Volvo","Saab","Ford","Audi"];
+	var text="";
+	var i;
+	for(i=0;i<cars.length,i++){
+		text+=cars[i]+"<br>";
+	}
+	document.getElementById("car").innerHTML=text;
+</script>
+</body>
+</html>
